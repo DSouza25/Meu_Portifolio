@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+*{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --darkGreen: #006414;
+    --normalGreen: #009929;
+    --lightGreen: #5ccb5f;
+    --black: #141214;
+    --gray: #413e40;
+}
+header{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--black);
+}
+header > nav{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.25rem;
+    align-items: center;
+    color: var(--black);
+}
+header > nav > a{
+    color: var(--normalGreen);
+}
+header > nav > a:hover{
+    color: var(--lightGreen);
+}
+main{
+    height: 90vh;
+    width: 100vw;
+}
+#aboutMe{
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--black);
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+.informations{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.blockInformation{
+    width: 80%;
+    height: 6%;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes informationsIn {
+    0%{
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    75%{
+        transform: translateY(-80px);
+    }
+    100%{
+        transform: translateY(-60px);
+        opacity: 1;
+    }
+}
+@keyframes surgir {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes sumir {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.blockInformation > div{
+    margin: 0px 10px;
+    box-sizing: border-box;
+    padding-left: 8px;
+}
+.informationLeft{
+    background-color: whitesmoke;
+    height: 100%;
+    width: 25%;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px black;
+}
+.informationRight{
+    background-color: var(--normalGreen);
+    color: whitesmoke;
+    height: 100%;
+    width: 70%;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
+}
+.informationRight > img{
+    width: 7%;
+    margin-left: 5px;
+    box-shadow: 0px 1px 2px var(--darkGreen);
+}
+#toBack{
+    height: 6%;
+    width: 24%;
+    color: whitesmoke;
+    border: 2px solid var(--normalGreen);
+    background-color: var(--gray);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .8rem;
+    transform: translateY(-20px);
+}
+#toBack:hover{
+    background-color: var(--normalGreen);
+    cursor: pointer;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+#toBack:active{
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.perfil{
+    height: 100%;
+    width: 35%;
+    background-color: whitesmoke;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 7.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+#name{
+    font-family: 'Inspiration', cursive;
+    text-align: center;
+    font-size: 7rem;
+    color: white;
+    position: absolute;
+    height: 15%;
+    width: 40%;
+    top: 30%;
+    right: 7%;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.774);
+    z-index: 1;
+}
+#slogan{
+    color: white;
+    position: absolute;
+    text-align: center;
+    right: 13.7%;
+    top: 53%;
+    font-size: 1.27rem;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 1;
+}
+#moreInformation{
+    height: 6%;
+    width: 14%;
+    border: 2px solid var(--normalGreen);
+    background-color: var(--gray);
+    position: absolute;
+    top: 64%;
+    right: 19.1%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#moreInformation:hover{
+    background-color: var(--normalGreen);
+    cursor: pointer;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+#moreInformation:active{
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+#moreInformation > p{
+    font-size: 0.66rem;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+#picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22%;
+}
+#picture::before{
+    content: '';
+    width: 50%;
+    height: 43%;
+    border-radius: 50%;
+    position: absolute;
+    border: 5px solid var(--normalGreen);
+}
+#picture > img{
+    width: 48%;
+    border-radius: 50%;
+    z-index: 1;
+}
+.icons{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.icons nav{
+    width: 50%;
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+}
+.icons > nav > a {
+    display: flex;
+    width: 36%;
+    height: 28%;
+    justify-content: center;
+}
+.icons > nav > a > img {
+    width: 60%;
+    z-index: 3;
+}
+
+/*↓↓↓↓↓ projects ↓↓↓↓↓*/
+
+#projects{
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contents{
+    background-color: var(--black);
+    width: 100%;
+    height: 70%;
+    box-shadow: inset 0px 0px 4px black;
+    display: flex;
+    justify-content: center;
+}
+
+#project{
+    height: 100%;
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#projectView{
+    height: 70%;
+    width: 30%;
+    border: 4px solid var(--normalGreen);
+    border-radius: 5%;
+    background-image: url("https://images.hdqwalls.com/download/error-404-page-3k-1366x768.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+#backProject{
+    height: 80%;
+    width: 30%;
+    left: -25%;
+    position: absolute;
+    border-radius: 20px;
+    transition: .3s;
+    background-color: rgba(245, 245, 245, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(245, 245, 245, 0.8);
+}
+#backProject:hover{
+    left: -18%;
+    cursor: pointer;
+    background-color: rgba(245, 245, 245, 0.25);
+    justify-content: right;
+    font-size: 1.3rem;
+    
+}
+#nextProject{
+    height: 80%;
+    width: 30%;
+    right: -25%;
+    position: absolute;
+    border-radius: 20px;
+    transition: .3s;
+    background-color: rgba(245, 245, 245, 0.08);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: rgba(245, 245, 245, 0.8);
+}
+#nextProject:hover{
+    right: -18%;
+    cursor: pointer;
+    background-color: rgba(245, 245, 245, 0.30);
+    justify-content: left;
+    font-size: 1.2rem;
+}
+#projectDescription{
+    height: 70%;
+    width: 30%;
+    margin-left: 10%;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#projectDescription > p{
+    color: whitesmoke;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+}
+#projectDescription > a{
+    height: 10%;
+}
+#goToProject{
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--normalGreen);
+    background-color: var(--gray);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .75rem;
+}
+#goToProject:hover{
+    background-color: var(--normalGreen);
+    cursor: pointer;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+#goToProject:active{
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+#projectName{
+    margin-right: 10%;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+#projectName > h1{
+    font-size: 3rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+/*↓↓↓↓↓ contact ↓↓↓↓↓*/
+#contactMe{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+}
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    width: 35%;
+    border: 3px solid var(--normalGreen);
+    box-shadow: inset 0px 0px 8px black;
+    padding: 10px;
+    border-radius: 5%;
+    background-color: var(--gray);
+}
+#contactForm > h1{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2rem;
+}
+#contactForm > label{
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 50%;
+    text-align: start;
+    margin: 20px 0px 0px 18px;
+    font-size: 1.1rem;
+}
+#contactForm > input{
+    height: 7%;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    background-color: var(--lightGreen);
+    border: 2px solid var(--normalGreen);
+    color: whitesmoke;
+    box-sizing: border-box;
+    padding: 15px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#message{
+    height: 30%;
+    border-radius: 10px;
+    border: 2px solid var(--normalGreen);
+    background-color: var(--lightGreen);
+    box-sizing: border-box;
+    padding: 10px;
+    color: whitesmoke;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 1.05rem;
+    resize: none;
+}
+#contactForm > #submit{
+    margin-top: 10px;
+    padding: 0px;
+    transition: 0.3s;
+}
+    
+#submit:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: var(--normalGreen);
+    text-shadow: none;
+}
