@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --i:15;
+        }
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            overflow: hidden;
+        }
+        .luz{
+            height: 2px;
+            width: 2px;
+            background-color: rgba(1, 245, 54, 0.8);
+            border-radius: 50%;
+        }
+        
+        @keyframes piscar {
+            0%{
+                box-shadow: 0px 0px 0px rgba(245, 245, 245);
+                transform: translateY(50vh);
+            }
+            50%{
+                box-shadow: 0px 0px 5px rgba(245, 245, 245),
+                0px 0px 10px rgba(245, 245, 245, 0.8),
+                0px 0px 15px rgba(245, 245, 245, 0.6);
+            }
+            100%{
+                box-shadow: 0px 0px 0px rgba(245, 245, 245); 
+                transform: translateY(-60vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="luz"></div>
+    <script>
+    var elemento_pai = document.querySelector('.backgroundDinamico');
+      for (let index = 0; index < 50; index++) {
+        
+        var divNova = document.createElement("div");
+        divNova.classList.add("luz");
+        elemento_pai.appendChild(divNova);
+        const brilho = document.querySelectorAll('.luz');
+        let divisor = Math.random() * (20 - 5) + 5;
+        brilho[index].style.animation = `piscar calc(60s/${divisor}) linear infinite`;
+    }  
+    
+    </script>
+</body>
+</html>

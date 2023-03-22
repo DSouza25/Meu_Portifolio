@@ -158,3 +158,13 @@ function changeProject(increment){
     projectLink.href = projects[index].link;
 
 }
+    var elemento_pai = document.querySelector('.backgroundDinamico');
+    for (let index = 0; index < 50; index++) {
+    
+    var divNova = document.createElement("div");
+    divNova.classList.add("luz");
+    elemento_pai.appendChild(divNova);
+    const brilho = document.querySelectorAll('.luz');
+    let divisor = Math.random() * (20 - 5) + 5;
+    brilho[index].style.animation = `piscar calc(60s/${divisor}) linear infinite`;
+    }
