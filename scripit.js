@@ -132,7 +132,12 @@ const projects = [{
     link: "https://dsouza25.github.io/Login-Animado-com-CSS/",
     image: "images/login_animado.png",
     description: "Projeto feito com HTML5 e CSS3, onde mostra a entrada suavizada dos inputs para gerar uma dinamização com o usuário",
-
+}, {
+    tecnology: ["HTML5", "CSS3", "JavaScript"],
+    name: "Pokedex",
+    link: "https://dsouza25.github.io/pokedex/",
+    image: "images/pokedex.png",
+    description: "Projeito feito para treinar o uso do javascript na estilização dinâmica e a consulta de API's",
 }]
 /* ↑↑↑↑↑ Projects ↑↑↑↑↑*/
 /* ------------------------------------------------------------------*/
