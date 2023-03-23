@@ -158,7 +158,7 @@ function changeProject(increment){
     projectLink.href = projects[index].link;
 
 }
-    var elemento_pai = document.querySelector('.backgroundDinamico');
+    /*var elemento_pai = document.querySelector('.backgroundDinamico');
     for (let index = 0; index < 50; index++) {
     
     var divNova = document.createElement("div");
@@ -167,4 +167,99 @@ function changeProject(increment){
     const brilho = document.querySelectorAll('.luz');
     let divisor = Math.random() * (20 - 5) + 5;
     brilho[index].style.animation = `piscar calc(60s/${divisor}) linear infinite`;
+    }*/
+
+if(window.innerWidth <= 425){
+    function toMove(){
+        let perfilBlock = document.querySelector(".perfil");
+        perfilBlock.style.left = "0%";
+        perfilBlock.style.top = "50%";
+        perfilBlock.style.transition = "1s";
+        
+        let name = document.querySelector("#name");
+        let slogan = document.querySelector("#slogan");
+        let moreInformation = document.querySelector("#moreInformation");
+        
+       
+        name.style.animation = "sumir .5s both"
+    
+        
+        slogan.style.animation = "sumir .5s both"
+        
+        
+        moreInformation.style.animation = "sumir .5s both"
+    
+        
+        
+        let iName = document.querySelector("#iName");
+        iName.style.animation = "informationsIn 1s both .3s";
+    
+        let fullName = document.querySelector("#fullName");
+        fullName.style.animation = "informationsIn 1s both .4s";
+    
+        let iAge = document.querySelector("#iAge");
+        iAge.style.animation = "informationsIn 1s both .3s";
+    
+        let age = document.querySelector("#age");
+        age.style.animation = "informationsIn 1s both .4s";
+    
+        let iFormation = document.querySelector("#iFormation");
+        iFormation.style.animation = "informationsIn 1s both .3s";
+    
+        let formation = document.querySelector("#formation");
+        formation.style.animation = "informationsIn 1s both .4s";
+    
+        let iTech = document.querySelector("#iTech");
+        iTech.style.animation = "informationsIn 1s both .3s";
+    
+        let tech = document.querySelector("#tech");
+        tech.style.animation = "informationsIn 1s both .4s";
     }
+
+    function toBack(){
+        let perfilBlock = document.querySelector(".perfil");
+        perfilBlock.style.left = "0%";
+        perfilBlock.style.top = "0%";
+        perfilBlock.style.transition = "1s";
+        
+        let name = document.querySelector("#name");
+        let slogan = document.querySelector("#slogan");
+        let moreInformation = document.querySelector("#moreInformation");
+        
+        moreInformation.style.display = "flex";
+        slogan.style.display = "block";
+        name.style.display = "block";
+        
+        name.style.animation = "surgir 1s both .3s"
+    
+        slogan.style.animation = "surgir 1s both .3s"
+       
+        moreInformation.style.animation = "surgir 1s both .3s"
+    
+        
+        
+        let iName = document.querySelector("#iName");
+        iName.style.animation = "sumir 1s both";
+    
+        let fullName = document.querySelector("#fullName");
+        fullName.style.animation = "sumir 1s both";
+    
+        let iAge = document.querySelector("#iAge");
+        iAge.style.animation = "sumir 1s both";
+    
+        let age = document.querySelector("#age");
+        age.style.animation = "sumir 1s both";
+    
+        let iFormation = document.querySelector("#iFormation");
+        iFormation.style.animation = "sumir 1s both";
+    
+        let formation = document.querySelector("#formation");
+        formation.style.animation = "sumir 1s both";
+    
+        let iTech = document.querySelector("#iTech");
+        iTech.style.animation = "sumir 1s both";
+    
+        let tech = document.querySelector("#tech");
+        tech.style.animation = "sumir 1s both";
+    }
+}
